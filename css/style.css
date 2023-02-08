@@ -1110,6 +1110,19 @@ input[type="range"]:focus::-ms-fill-upper {
     display: none;
   }
   /* navigation */
+  .wishlist {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    z-index:4;
+    display: grid !important;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--gray-300);
+    background-color: var(--whitesj);
+  }
   header {
     top: 0 !important;
   }
@@ -1171,6 +1184,9 @@ input[type="range"]:focus::-ms-fill-upper {
     display: block;
     padding: 12px 0;
     border-bottom: 1px solid var(--gray-300);
+  }
+  .menu-item:last-child a {
+    border: none;
   }
   .item-right .right-icons {
     display: block;

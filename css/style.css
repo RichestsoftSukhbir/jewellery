@@ -1121,6 +1121,14 @@ input[type="range"]:focus::-ms-fill-upper {
   .top-nav .logo {
     width: 170px !important;
   }
+  .top-item-right {
+    display: flex !important;
+    align-items: center;
+    gap: 15px;
+  }
+  .top-item-right svg path {
+    stroke: var(--primary_color-900);
+  }
   .navigation-wrapper {
     padding: 0 !important;
   }

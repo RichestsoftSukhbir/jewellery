@@ -22,12 +22,12 @@ let ham = document.querySelector('.hamburger');
 let btmNav = document.querySelector('.bottom-nav');
 let navOverlay = document.querySelector('.nav-overlay');
 
-ham.addEventListener('click', function() {
+ham.addEventListener('click', function () {
     btmNav.classList.toggle('active');
     ham.classList.toggle('active');
     navOverlay.classList.toggle('active');
 });
-navOverlay.addEventListener('click', function() {
+navOverlay.addEventListener('click', function () {
     btmNav.classList.toggle('active');
     ham.classList.toggle('active');
     navOverlay.classList.toggle('active');
@@ -287,7 +287,7 @@ if (document.querySelector('.grid-view')) {
 }
 
 // drift zoom
-if(document.querySelector('.drift-demo-trigger')) {
+if (document.querySelector('.drift-demo-trigger')) {
     var driftAll = document.querySelectorAll('.drift-demo-trigger');
     var pane = document.querySelector('.zoom');
     $(driftAll).each(function (i, el) {
@@ -305,4 +305,61 @@ if(document.querySelector('.drift-demo-trigger')) {
 }
 
 // preview image changer
-// let prevImage = document.querySelector('')
+let prevImage = document.querySelector('.prod-preview > img');
+
+let altImages = document.querySelectorAll('.prod-alt');
+
+altImages.forEach(function (element) {
+    element.addEventListener('click', function () {
+        let imgSrc = element.children[0].src;
+        prevImage.src = imgSrc;
+        prevImage.setAttribute('data-zoom', imgSrc);
+        altImages.forEach(function (e) {
+            e.classList.remove('active');
+        });
+        this.classList.add('active');
+    });
+});
+
+// product quantity
+let qtyInput = document.querySelector('.qty-input');
+let qtyInc = document.querySelector('.qty-inc');
+let qtyDec = document.querySelector('.qty-dec');
+
+let defaultQty = 1;
+
+qtyDec.addEventListener('click', function () {
+    qtyInput.value = --defaultQty;
+    localStorage.qty = qtyInput.value;
+    qtyLimit(1, this, qtyInc);
+});
+qtyInc.addEventListener('click', function () {
+    qtyInput.value = ++defaultQty;
+    localStorage.qty = qtyInput.value;
+    qtyLimit(10, this, qtyDec);
+});
+
+defaultQty = localStorage.getItem('qty');
+qtyInput.value = defaultQty;
+
+qtyLimit(1, qtyDec, qtyInc);
+
+function qtyLimit(limit, item, alter) {
+    if(defaultQty == limit) {
+        item.setAttribute('disabled', 'true');
+        alter.removeAttribute('disabled');
+    } else {
+        item.removeAttribute('disabled');
+        alter.removeAttribute('disabled');
+    }
+}
+
+// product categories show on small screen
+if (document.querySelector('.prod-cat-show')) {
+    let prodCatShow = document.querySelector('.prod-cat-show');
+    let prodCat = document.querySelector('.prod-cat');
+
+    prodCatShow.addEventListener('click', function () {
+        prodCat.classList.toggle('active');
+    });
+}

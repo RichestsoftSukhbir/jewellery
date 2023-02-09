@@ -169,10 +169,12 @@ a.theme-link,
   line-height: 21.33px;
   font-family: var(--playfair);
   padding: 13px 24px;
+  min-width: 150px;
   text-transform: capitalize;
   font-weight: 700;
   background-color: var(--primary_color-900);
   border-radius: 10px;
+  text-align: center;
   color: var(--whitesj);
 }
 .button-alt {
@@ -345,6 +347,10 @@ header {
 }
 /* navigation ends */
 /* index */
+.hero-video {
+  height: 650px;
+  object-fit: cover;
+}
 .trending-products::after,
 .trending-products::before {
   content: "";
@@ -539,7 +545,7 @@ header {
   background-color: #a8a8a8;
   height: 16px;
   width: 16px;
-  border: 3px solid transparent;
+  border: 3px solid var(--whitesj);
   transition: all 0.3s ease;
   opacity: 1;
 }
@@ -581,6 +587,7 @@ header {
 .newsletter-wrapper {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   align-items: center;
   justify-content: space-between;
 }
@@ -591,6 +598,14 @@ header {
 }
 /* index ends */
 /* footer */
+footer a path {
+  transition: all 0.3s ease;
+}
+footer a:hover path,
+footer a:hover {
+  fill: var(--primary_color-900);
+  color: var(--primary_color-900);
+}
 .footer-row {
   display: flex;
   flex-wrap: wrap;
@@ -612,7 +627,9 @@ header {
   flex: 0 0 auto;
   width: 15px;
 }
-
+.cont-list .cont-text {
+  line-height: 24px;
+}
 .footer-list li:not(:last-child) {
   margin-bottom: 10px;
 }
@@ -654,7 +671,8 @@ header {
 /* product */
 .breadcrumb-menu {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 5px 24px;
   font-size: 14px;
   line-height: 16.44px;
 }
@@ -960,7 +978,7 @@ input[type="range"]:focus::-ms-fill-upper {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px 20px;
+  gap: 10px;
   align-items: center;
   justify-content: space-between;
 }
@@ -971,6 +989,14 @@ input[type="range"]:focus::-ms-fill-upper {
 }
 .sort-by p {
   flex: 0 0 auto;
+}
+.filter-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filter-more img {
+  cursor: pointer;
 }
 /* product ends */
 /* product details */
@@ -992,12 +1018,18 @@ input[type="range"]:focus::-ms-fill-upper {
   overflow: hidden;
   background-color: var(--gray-50);
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .prod-alt img,
 .prod-preview > img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+.prod-preview > img {
+  height: auto;
 }
 .prod-alt img {
   object-fit: cover;
@@ -1158,6 +1190,9 @@ input[type="range"]:focus::-ms-fill-upper {
     justify-content: space-between;
     align-items: center;
   }
+  .top-nav {
+    border-bottom: 1px solid var(--primary_color-50);
+  }
   .bottom-nav {
     position: absolute;
     top: 100%;
@@ -1169,6 +1204,7 @@ input[type="range"]:focus::-ms-fill-upper {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    border: none;
   }
   .bottom-nav.active {
     visibility: visible;
@@ -1241,9 +1277,21 @@ input[type="range"]:focus::-ms-fill-upper {
     width: 50px;
   }
   /* footer ends */
+  /* product page */
+  .prod-cat {
+    height: 0 !important;
+    overflow: hidden;
+    margin: 0;
+    transition: all 0.3s ease;
+  }
+  .prod-cat.active {
+    height: 100% !important;
+    margin-top: 1rem;
+  }
+  /* product page ends */
   /* product details page */
   .prod-preview {
-    height: unset;
+    height: 300px;
   }
   .prod-preview > img {
     width: 100%;
@@ -1255,6 +1303,15 @@ input[type="range"]:focus::-ms-fill-upper {
   /* product details page ends */
 }
 @media (max-width: 767px) {
+  .button-alt,
+  .button-prod,
+  .secondary-button,
+  .theme-button-outline,
+  .theme-button-lg,
+  .theme-button {
+    padding: 12px;
+    min-width: 140px;
+  }
   .spacer-y {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -1264,6 +1321,9 @@ input[type="range"]:focus::-ms-fill-upper {
     width: 130px !important;
   }
   /* navigation ends */
+  .hero-video {
+    height: 100%;
+  }
   .cat-slide-btn {
     display: none;
   }
@@ -1327,5 +1387,8 @@ input[type="range"]:focus::-ms-fill-upper {
   }
   .prod-nav .prod-nav-btn {
     order: 2;
+  }
+  .newsletter-button {
+    flex-wrap: wrap;
   }
 }

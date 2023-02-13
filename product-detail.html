@@ -14,12 +14,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    
+    <!-- favicon -->
+    <link rel="icon" href="./images/sarena-icon.webp">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- drift zoom -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.5.1/drift-basic.min.css" integrity="sha512-+hhMc7TT8p7aB6MgSfvjclgIzBA0ldSUmMC3E/1ybTD/25BO5WMrCEzxNTKL4ljTFu+5l4EdqGn+en2EcwvedA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.5.1/drift-basic.min.css"/>
 
     <!-- css link -->
     <link rel="stylesheet" href="./css/style.css">
@@ -34,7 +40,7 @@
     </section>
     <header class="header bg-offbody">
         <nav class="navigation">
-            <div class="top-nav">
+            <div class="top-nav zindex-up">
                 <div class="container text-center">
                     <div class="navigation-top">
                         <a href="./index.html" class="text-center">
@@ -102,45 +108,69 @@
                                         </button>
                                     </form>
                                 </li>
-                                <li class="menu-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="menu-item"><a href="javascript:void(0)">Shop</a></li>
-                                <li class="menu-item"><a href="javascript:void(0)">Blog</a></li>
-                                <li class="menu-item"><a href="javascript:void(0)">About Us</a></li>
-                                <li class="menu-item"><a href="javascript:void(0)">Contact Us</a></li>
+                                <li class="menu-item"><a href="./index.html">Home</a></li>
+                                <li class="menu-item"><a href="./product.html">Shop</a></li>
+                                <li class="menu-item"><a href="./blog.html">Blog</a></li>
+                                <li class="menu-item"><a href="./about.html">About Us</a></li>
+                                <li class="menu-item"><a href="./contact.html">Contact Us</a></li>
                             </ul>
                         </div>
                         <div class="item-right">
                             <ul class="list-unstyled right-icons m-0">
-                                <li>
+                                <li class="nav-search-btn">
                                     <a href="javascript:void(0)" class="mobile-hide">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" stroke="#1D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path opacity="1" d="M22 22L20 20" stroke="#1D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                                                stroke="#1D2939" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path opacity="1" d="M22 22L20 20" stroke="#1D2939" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="nav-wishlist-btn">
                                     <a href="javascript:void(0)" class="mobile-hide">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 21.6501C11.69 21.6501 11.39 21.6101 11.14 21.5201C7.32 20.2101 1.25 15.5601 1.25 8.6901C1.25 5.1901 4.08 2.3501 7.56 2.3501C9.25 2.3501 10.83 3.0101 12 4.1901C13.17 3.0101 14.75 2.3501 16.44 2.3501C19.92 2.3501 22.75 5.2001 22.75 8.6901C22.75 15.5701 16.68 20.2101 12.86 21.5201C12.61 21.6101 12.31 21.6501 12 21.6501ZM7.56 3.8501C4.91 3.8501 2.75 6.0201 2.75 8.6901C2.75 15.5201 9.32 19.3201 11.63 20.1101C11.81 20.1701 12.2 20.1701 12.38 20.1101C14.68 19.3201 21.26 15.5301 21.26 8.6901C21.26 6.0201 19.1 3.8501 16.45 3.8501C14.93 3.8501 13.52 4.5601 12.61 5.7901C12.33 6.1701 11.69 6.1701 11.41 5.7901C10.48 4.5501 9.08 3.8501 7.56 3.8501Z" fill="#1D2939"/>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 21.6501C11.69 21.6501 11.39 21.6101 11.14 21.5201C7.32 20.2101 1.25 15.5601 1.25 8.6901C1.25 5.1901 4.08 2.3501 7.56 2.3501C9.25 2.3501 10.83 3.0101 12 4.1901C13.17 3.0101 14.75 2.3501 16.44 2.3501C19.92 2.3501 22.75 5.2001 22.75 8.6901C22.75 15.5701 16.68 20.2101 12.86 21.5201C12.61 21.6101 12.31 21.6501 12 21.6501ZM7.56 3.8501C4.91 3.8501 2.75 6.0201 2.75 8.6901C2.75 15.5201 9.32 19.3201 11.63 20.1101C11.81 20.1701 12.2 20.1701 12.38 20.1101C14.68 19.3201 21.26 15.5301 21.26 8.6901C21.26 6.0201 19.1 3.8501 16.45 3.8501C14.93 3.8501 13.52 4.5601 12.61 5.7901C12.33 6.1701 11.69 6.1701 11.41 5.7901C10.48 4.5501 9.08 3.8501 7.56 3.8501Z"
+                                                fill="#1D2939" />
                                         </svg>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="nav-cart-btn">
                                     <a href="javascript:void(0)" class="mobile-hide">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path opacity="1" d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path opacity="1" d="M15.4955 12H15.5045" stroke="#1D2939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path opacity="1" d="M8.49451 12H8.50349" stroke="#1D2939" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path opacity="1"
+                                                d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001"
+                                                stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path
+                                                d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z"
+                                                stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="1" d="M15.4955 12H15.5045" stroke="#1D2939" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                            <path opacity="1" d="M8.49451 12H8.50349" stroke="#1D2939" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </a>
                                 </li>
-                                <li>
+                                <li class="nav-user-btn">
                                     <a href="javascript:void(0)" class="mobile-hide">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z" stroke="#1D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                            <path opacity="1" d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22" stroke="#1D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M12 12C14.7614 12 17 9.76142 17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7C7 9.76142 9.23858 12 12 12Z"
+                                                stroke="#1D2939" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path opacity="1"
+                                                d="M20.5899 22C20.5899 18.13 16.7399 15 11.9999 15C7.25991 15 3.40991 18.13 3.40991 22"
+                                                stroke="#1D2939" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
                                         </svg>
                                     </a>
                                 </li>
@@ -148,6 +178,30 @@
                         </div>
                     </div>
                 </div>
+                <form action="" method="get" class="nav-search-bar mobile-hide">
+                    <div class="position-relative nav-search-blk">
+                        <input type="search" class="form-control nav-search theme-form-control"
+                            placeholder="Search">
+                        <button type="submit" class="btn-reset search-btn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"
+                                    stroke="#98A2B3" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path opacity="1" d="M22 22L20 20" stroke="#98A2B3" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                    <button type="button" class="close-search btn-reset">
+                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M9.56066 8.35355L17.2071 0.707107L16.5 0L8.85355 7.64645L1.20711 0L0.5 0.707107L8.14645 8.35355L0.5 16L1.20711 16.7071L8.85355 9.06066L16.5 16.7071L17.2071 16L9.56066 8.35355Z"
+                                fill="black" />
+                        </svg>
+                    </button>
+                </form>
             </div>
         </nav>
     </header>
@@ -156,8 +210,7 @@
     </div>
     <div class="nav-overlay desktop-hide"></div>
     <main>
-
-        <section class="theme-bredcrumb py-4 muted-bg">
+        <section class="theme-bredcrumb py-4 muted-bg wow animate__animated animate__fadeInUp">
             <div class="container">
                 <ul class="breadcrumb-menu list-unstyled m-0">
                     <li><a href="javascript:void(0)">Home</a></li>
@@ -166,12 +219,11 @@
                 </ul>
             </div>
         </section>
-
         <section class="product-detail-wrapper">
             <div class="container spacer-y">
                 <div class="row g-3 gy-4 gy-lg-0 gx-lg-4 gx-xl-5">
                     <div class="col-lg-7 col-md-6">
-                        <div class="prod-preview-content">
+                        <div class="prod-preview-content wow animate__animated animate__fadeInUp">
                             <div class="prod-preview">
                                 <div class="zoom-icon">
                                     <img src="./images/icons/zoom.svg" alt="">
@@ -206,7 +258,7 @@
                     </div>
                     <div class="col-lg-5 col-md-6">
                         <div class="prod-detail-content zoom position-relative">
-                            <div class="client-rating mb-2 justify-content-start">
+                            <div class="client-rating mb-2 justify-content-start wow animate__animated animate__fadeInUp">
                                 <div class="star star-full">
                                     <svg width="19" height="18" viewBox="0 0 19 18" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -248,10 +300,10 @@
                                     </svg>
                                 </div>
                             </div>
-                            <div class="prod-name">
+                            <div class="prod-name wow animate__animated animate__fadeInUp">
                                 <h2 class="prod-title mb-3">Sophisticated Stud Earrings</h2>
                             </div>
-                            <div class="prod-desc mb-4">
+                            <div class="prod-desc mb-4 wow animate__animated animate__fadeInUp">
                                 <p class="mb-3">
                                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
                                     Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -261,11 +313,11 @@
                                     specimen book.
                                 </p>
                             </div>
-                            <div class="price-row mb-4">
+                            <div class="price-row mb-4 wow animate__animated animate__fadeInUp">
                                 <span class="mrp text-lg">$250.00</span>
                                 <span class="our-price">$240.00</span>
                             </div>
-                            <div class="quantity mb-4">
+                            <div class="quantity mb-4 wow animate__animated animate__fadeInUp">
                                 <h6 class="mb-3">Quantity</h6>
                                 <div class="qty-grp">
                                     <button type="button" class="btn-reset qty-btn qty-dec">
@@ -274,7 +326,7 @@
                                             <path d="M1 0.5H13.91" stroke="#101828" stroke-linecap="round" />
                                         </svg>
                                     </button>
-                                    <input type="text" class="form-control qty-input text-center" readonly>
+                                    <input type="text" value="1" class="form-control qty-input text-center" readonly>
                                     <button type="button" class="btn-reset qty-btn qty-inc">
                                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
@@ -286,13 +338,13 @@
                                 </div>
                             </div>
                             <div class="order-button mb-3">
-                                <a href="javascript:void(0)" class="button-alt w-100 text-center mb-3">Add to cart</a>
-                                <a href="javascript:void(0)" class="theme-button w-100 text-center">Buy it now</a>
+                                <a href="javascript:void(0)" class="button-alt w-100 text-center mb-3 wow animate__animated animate__fadeInUp">Add to cart</a>
+                                <a href="javascript:void(0)" class="theme-button w-100 text-center wow animate__animated animate__fadeInUp">Buy it now</a>
                             </div>
-                            <div class="prod-category text-sm mb-3">
+                            <div class="prod-category text-sm mb-3 wow animate__animated animate__fadeInUp">
                                 <p class="fw-500">Category: <span class="order-cat">Rose Gold Earrings</span></p>
                             </div>
-                            <div class="prod-tags text-sm mb-3">
+                            <div class="prod-tags text-sm mb-3 wow animate__animated animate__fadeInUp">
                                 <p class="mb-2 fw-500">Tags:</p>
                                 <ul class="list-unstyled m-0 odr-tag-wrapper">
                                     <li class="odr-tags"><a href="javascript:void(0)">Rose Gold</a></li>
@@ -300,7 +352,7 @@
                                     <li class="odr-tags"><a href="javascript:void(0)">New</a></li>
                                 </ul>
                             </div>
-                            <div class="prod-share">
+                            <div class="prod-share wow animate__animated animate__fadeInUp">
                                 <ul class="list-unstyled m-0 share-socials">
                                     <li>
                                         <a href="javascript:void(0)">
@@ -391,13 +443,13 @@
             <div class="container spacer-y pb-0">
                 <div class="row justify-content-center mb-40">
                     <div class="col-lg-10 text-center">
-                        <h5 class="primary-text mb-2">Related Products</h5>
-                        <h2>You may Also Like</h2>
+                        <h5 class="primary-text mb-2 wow animate__animated animate__fadeInUp">Related Products</h5>
+                        <h2 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">You may Also Like</h2>
                     </div>
                 </div>
             </div>
             <div class="container-fluid px-md-0 spacer-y pt-0">
-                <div class="swiper related-prod-swiper">
+                <div class="swiper related-prod-swiper wow animate__animated animate__fadeInUp">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="prod-cover">
@@ -442,7 +494,7 @@
                                         <span class="mrp">$250.00</span>
                                         <span class="our-price">$240.00</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="button-prod w-100 text-center">
+                                    <a href="./product-detail.html" class="button-prod w-100 text-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path opacity="0.4" d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -497,7 +549,7 @@
                                         <span class="mrp">$250.00</span>
                                         <span class="our-price">$240.00</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="button-prod w-100 text-center">
+                                    <a href="./product-detail.html" class="button-prod w-100 text-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path opacity="0.4" d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -552,7 +604,7 @@
                                         <span class="mrp">$250.00</span>
                                         <span class="our-price">$240.00</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="button-prod w-100 text-center">
+                                    <a href="./product-detail.html" class="button-prod w-100 text-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path opacity="0.4" d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -607,7 +659,7 @@
                                         <span class="mrp">$250.00</span>
                                         <span class="our-price">$240.00</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="button-prod w-100 text-center">
+                                    <a href="./product-detail.html" class="button-prod w-100 text-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path opacity="0.4" d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -662,7 +714,7 @@
                                         <span class="mrp">$250.00</span>
                                         <span class="our-price">$240.00</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="button-prod w-100 text-center">
+                                    <a href="./product-detail.html" class="button-prod w-100 text-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path opacity="0.4" d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -717,7 +769,7 @@
                                         <span class="mrp">$250.00</span>
                                         <span class="our-price">$240.00</span>
                                     </div>
-                                    <a href="javascript:void(0)" class="button-prod w-100 text-center">
+                                    <a href="./product-detail.html" class="button-prod w-100 text-center">
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path opacity="0.4" d="M7.5 7.67001V6.70001C7.5 4.45001 9.31 2.24001 11.56 2.03001C14.24 1.77001 16.5 3.88001 16.5 6.51001V7.89001" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                             <path d="M9.00007 22H15.0001C19.0201 22 19.7401 20.39 19.9501 18.43L20.7001 12.43C20.9701 9.99 20.2701 8 16.0001 8H8.00007C3.73007 8 3.03007 9.99 3.30007 12.43L4.05007 18.43C4.26007 20.39 4.98007 22 9.00007 22Z" stroke="#1D2939" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -737,24 +789,24 @@
             <div class="container spacer-y">
                 <div class="row justify-content-center mb-40">
                     <div class="col-lg-5 text-center">
-                        <h2 class="mb-3">Follow us on instagram</h2>
-                        <p>It is a long established fact that a reader will be distracted by the readable content of a
+                        <h2 class="mb-3 wow animate__animated animate__fadeInUp">Follow us on instagram</h2>
+                        <p class="wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">It is a long established fact that a reader will be distracted by the readable content of a
                             page when.</p>
                     </div>
                 </div>
                 <div class="row g-3 gx-lg-4">
                     <div class="col-lg-4 col-md-4">
-                        <div class="insta-post">
+                        <div class="insta-post wow animate__animated animate__fadeInUp">
                             <img src="./images/instagram-post.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
-                        <div class="insta-post">
+                        <div class="insta-post wow animate__animated animate__fadeInUp">
                             <img src="./images/instagram-post.png" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4">
-                        <div class="insta-post">
+                        <div class="insta-post wow animate__animated animate__fadeInUp">
                             <img src="./images/instagram-post.png" alt="">
                         </div>
                     </div>
@@ -764,11 +816,11 @@
         <section class="newsletter primary-bg text-white">
             <div class="container spacer-y">
                 <div class="newsletter-wrapper">
-                    <div class="newsletter-content">
+                    <div class="newsletter-content wow animate__animated animate__fadeInUp">
                         <h5 class="mb-2">Join our newsletter</h5>
                         <p>We’ll send you a nice letter once per week. No spam.</p>
                     </div>
-                    <form action="" method="post" class="newsletter-button input-blk">
+                    <form action="" method="post" class="newsletter-button input-blk wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
                         <input type="text" class="form-control theme-form-control" placeholder="Enter your email">
                         <button class="btn secondary-button">Subscribe</button>
                     </form>
@@ -812,18 +864,16 @@
                 <div class="footer-col">
                     <h5 class="mb-3">Useful links</h5>
                     <ul class="list-unstyled m-0 footer-list">
-                        <li><a href="javascript:void(0)">Home</a></li>
-                        <li><a href="javascript:void(0)">Shop</a></li>
-                        <li><a href="javascript:void(0)">About Us</a></li>
-                        <li><a href="javascript:void(0)">Blog</a></li>
-                        <li><a href="javascript:void(0)">Contact Us</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./product.html">Shop</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./blog.html">Blog</a></li>
+                        <li><a href="./contact.html">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h5 class="mb-3">Information</h5>
                     <ul class="list-unstyled m-0 footer-list">
-                        <li><a href="javascript:void(0)">About Us</a></li>
-                        <li><a href="javascript:void(0)">Contact Us</a></li>
                         <li><a href="javascript:void(0)">FAQs</a></li>
                         <li><a href="javascript:void(0)">Custom Service</a></li>
                         <li><a href="javascript:void(0)">Terms & Condition</a></li>
@@ -943,6 +993,9 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- wowjs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
     <!-- drift zoom -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/drift-zoom/1.5.1/Drift.min.js" integrity="sha512-3jfCYt7yMph2+Fem5WG6fHROvYyzwb+uAZ4GnHZUPzTmijA/HvgxF9Vi/7EXiDl8kp1VAgBI9d9j4fWrvSyQGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

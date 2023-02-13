@@ -10,14 +10,25 @@ function logoSale() {
     if (scrollPos > topHeadHeight) {
         document.querySelector('.logo').style.width = "170px";
         document.querySelector('.navigation-wrapper').style.padding = "15px 0";
+        document.querySelector('.nav-search-bar').style.padding = "4px 0";
     } else {
         document.querySelector('.logo').style.width = "280px";
         document.querySelector('.navigation-wrapper').style.padding = "24px 0";
+        document.querySelector('.nav-search-bar').style.padding = "12px 0";
     }
 }
 
 document.addEventListener('scroll', logoSale);
 
+// search toggler on desktop
+document.querySelector('.nav-search-btn').addEventListener('click', function () {
+    document.querySelector('.nav-search-bar').classList.add('active');
+})
+document.querySelector('.close-search').addEventListener('click', function () {
+    document.querySelector('.nav-search-bar').classList.remove('active');
+})
+
+// navbar toggler on mobile
 let ham = document.querySelector('.hamburger');
 let btmNav = document.querySelector('.bottom-nav');
 let navOverlay = document.querySelector('.nav-overlay');
@@ -158,6 +169,7 @@ var relProdSwiper = new Swiper(".related-prod-swiper", {
     spaceBetween: 30,
     speed: 1000,
     loop: true,
+    autoplay: true,
     navigation: {
         nextEl: ".cat-slide-btn.next",
         prevEl: ".cat-slide-btn.prev",
@@ -322,35 +334,41 @@ altImages.forEach(function (element) {
 });
 
 // product quantity
-let qtyInput = document.querySelector('.qty-input');
-let qtyInc = document.querySelector('.qty-inc');
-let qtyDec = document.querySelector('.qty-dec');
+if (document.querySelector('.qty-input')) {
+    let qtyInput = document.querySelector('.qty-input');
+    let qtyInc = document.querySelector('.qty-inc');
+    let qtyDec = document.querySelector('.qty-dec');
 
-let defaultQty = 1;
+    let defaultQty = '';
 
-qtyDec.addEventListener('click', function () {
-    qtyInput.value = --defaultQty;
-    localStorage.qty = qtyInput.value;
-    qtyLimit(1, this, qtyInc);
-});
-qtyInc.addEventListener('click', function () {
-    qtyInput.value = ++defaultQty;
-    localStorage.qty = qtyInput.value;
-    qtyLimit(10, this, qtyDec);
-});
+    qtyDec.addEventListener('click', function () {
+        qtyInput.value = --defaultQty;
+        localStorage.qty = qtyInput.value;
+        qtyLimit(1, this, qtyInc);
+    });
+    qtyInc.addEventListener('click', function () {
+        qtyInput.value = ++defaultQty;
+        localStorage.qty = qtyInput.value;
+        qtyLimit(10, this, qtyDec);
+    });
 
-defaultQty = localStorage.getItem('qty');
-qtyInput.value = defaultQty;
-
-qtyLimit(1, qtyDec, qtyInc);
-
-function qtyLimit(limit, item, alter) {
-    if(defaultQty == limit) {
-        item.setAttribute('disabled', 'true');
-        alter.removeAttribute('disabled');
+    if (localStorage.qty == null) {
+        defaultQty = 1;
     } else {
-        item.removeAttribute('disabled');
-        alter.removeAttribute('disabled');
+        defaultQty = localStorage.getItem('qty');
+    }
+
+    qtyInput.value = defaultQty;
+    qtyLimit(1, qtyDec, qtyInc);
+
+    function qtyLimit(limit, item, alter) {
+        if (defaultQty == limit) {
+            item.setAttribute('disabled', 'true');
+            alter.removeAttribute('disabled');
+        } else {
+            item.removeAttribute('disabled');
+            alter.removeAttribute('disabled');
+        }
     }
 }
 
@@ -363,3 +381,27 @@ if (document.querySelector('.prod-cat-show')) {
         prodCat.classList.toggle('active');
     });
 }
+
+// truncate blog card text
+let blgCardDsc = document.querySelectorAll('.blg-card-desc');
+let blgCardHead = document.querySelectorAll('.blg-card-head');
+
+truncateText(blgCardDsc, 95);
+truncateText(blgCardHead, 55);
+
+function truncateText(item, limit) {
+    item.forEach(function(element) {
+        let truncText = element.textContent.substring(0, limit);
+        if(element.textContent.length <= limit) {
+            element.textContent = truncText;
+        } else {
+            element.textContent = truncText + '...';
+        }
+    });
+}
+
+// let truncStng = blgCardDsc.substring(0, 95);
+// document.querySelector('.blg-card-desc').textContent = truncStng + "...";
+
+// wowjs
+new WOW().init();

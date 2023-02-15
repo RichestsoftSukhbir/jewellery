@@ -390,9 +390,9 @@ truncateText(blgCardDsc, 95);
 truncateText(blgCardHead, 55);
 
 function truncateText(item, limit) {
-    item.forEach(function(element) {
+    item.forEach(function (element) {
         let truncText = element.textContent.substring(0, limit);
-        if(element.textContent.length <= limit) {
+        if (element.textContent.length <= limit) {
             element.textContent = truncText;
         } else {
             element.textContent = truncText + '...';
@@ -400,8 +400,56 @@ function truncateText(item, limit) {
     });
 }
 
-// let truncStng = blgCardDsc.substring(0, 95);
-// document.querySelector('.blg-card-desc').textContent = truncStng + "...";
+// faq accordion
+$(document).ready(function () {
+    $('.accordion-list > li > .answer').hide();
+
+    $('.accordion-list > li').click(function () {
+        if ($(this).hasClass("active")) {
+            $(this).removeClass("active").find(".answer").slideUp();
+        } else {
+            $(".accordion-list > li.active .answer").slideUp();
+            $(".accordion-list > li.active").removeClass("active");
+            $(this).addClass("active").find(".answer").slideDown();
+        }
+        return false;
+    });
+
+});
+
+// login signup trigger
+let loginTrigger = document.querySelector('.login-trigger');
+let signupTrigger = document.querySelector('.signup-trigger');
+let loginForm = document.querySelector('.login-form');
+let signupForm = document.querySelector('.signup-form');
+
+loginTrigger.addEventListener("click", function() {
+    formTrigger(loginForm, signupForm);
+});
+signupTrigger.addEventListener("click", function() {
+    formTrigger(signupForm, loginForm);
+});
+
+function formTrigger(trigger, alter) {
+    trigger.classList.remove('d-none');
+    alter.classList.add('d-none');
+}
+
+// login signup form toggler
+let userBtn = document.querySelectorAll('.nav-user-btn');
+let closeForm = document.querySelector('.close-form');
+let formOverlay = document.querySelector('.form-overlay');
+userBtn.forEach(function(element){
+    element.addEventListener('click', function() {
+        document.querySelector('.login-signup').classList.toggle('active');
+    });
+});
+closeForm.addEventListener('click', function() {
+    document.querySelector('.login-signup').classList.toggle('active');
+});
+formOverlay.addEventListener('click', function() {
+    document.querySelector('.login-signup').classList.toggle('active');
+});
 
 // wowjs
 new WOW().init();
